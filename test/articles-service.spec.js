@@ -17,6 +17,10 @@ describe('ArticlesService', () => {
     return db('blogful_articles').truncate();
   });
 
+  after(() => {
+    db.destroy();
+  });
+
   const givenSeededData = (runTests) => {
     let testArticles;
     context('Given seeded data', () => {
