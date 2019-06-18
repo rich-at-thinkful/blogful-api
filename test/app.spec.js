@@ -1,11 +1,10 @@
-const { expect } = require('chai')
-const supertest = require('supertest')
-const app = require('../src/app')
+const app = require('../src/app');
 
-describe('App', () => {
-  it('GET / responds with 200 "Hello, world!"', () => {
+describe.only('App', () => {
+  it('GET / responds with default Express 404', () => {
     return supertest(app)
       .get('/')
-      .expect(200, 'Hello, world!')
-  })
-})
+      .expect(404)
+      .then(res => expect(res.text).to.include('Cannot GET /'));
+  });
+});
