@@ -8,7 +8,8 @@
     },
     "globals": {
         "expect": true,
-        "supertest": true
+        "supertest": true,
+        "sinon": true
     },
     "parserOptions": {
         "ecmaVersion": 8,

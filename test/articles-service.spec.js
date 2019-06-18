@@ -2,7 +2,7 @@ const ArticlesService = require('../src/articles-service');
 const { makeArticlesArray } = require('./articles.fixtures');
 const knex = require('knex');
 
-describe.only('ArticlesService', () => {
+describe('ArticlesService', () => {
   let db;
   before(() => {
     db = knex({
