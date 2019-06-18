@@ -1,6 +1,6 @@
 const app = require('../src/app');
 
-describe.only('App', () => {
+describe('App', () => {
   it('GET / responds with default Express 404', () => {
     return supertest(app)
       .get('/')
